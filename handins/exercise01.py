@@ -4,7 +4,7 @@ import math
 #1.A - Iterate a list of names to return a list of the names starting with H
 names = ['Hans', 'Jens', 'Hanne', 'Peter', 'Birgitte']
 
-names_starting_with_h = [name for name in names if name[0] == 'H']
+names_starting_with_h = [name for name in names if name[0].upper() == 'H']
 
 #1.B - In one line create a list of the numbers 1-100 to the power of 3
 
@@ -17,7 +17,7 @@ tuple_list = [(len(name), name) for name in names]
 
 #1.D - Iterate over each character in a string and get only those that are nummeric
 
-numeric_list = [n for n in 'FD6G5T2' if n.isdigit()]
+numeric_list = [n for n in 'FD62G5T2' if n.isdigit()]
 
 #1.E - Using only a list comprehension wrapped in set() get all possible combinations
 # from throwing 2 dice (hint use 2 for loops in a single list comprehension).
@@ -26,7 +26,9 @@ numeric_list = [n for n in 'FD6G5T2' if n.isdigit()]
 
 die = range(1,7)
 
-dice_result = set([(x,y) for x in die for y in die])
+dice_result = set([(x,y) for x in die for y in die if x >= y])
+
+print(dice_result)
 
 #Exercise 2
 #2.A - Iterate a list of names and create a dictionary
