@@ -14,8 +14,8 @@ def write_list_to_file(output_file, *args):
 #C
 def read_csv(input_file):
   with open(input_file) as file_object:
-    names = [name.strip() for name in file_object]
-    print(names)
+    file_list = [line.strip() for line in file_object]
+    print(file_list)
       
 
 if __name__ == '__main__':
