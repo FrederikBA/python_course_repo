@@ -23,8 +23,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='A program that can read from a file given a path and print it')
     parser.add_argument('path', help='Path to the csv file')
     args = parser.parse_args()
-    #read_csv_file('exercise02files/numbers.csv')
-    #write_list_to_file('exercise02files/textfile.txt', 'Johan', 'Anders', 'Line')
+    #read_csv_file('numbers.csv')
+    #write_list_to_file('textfile.txt', 'Johan', 'Anders', 'Line')
     read_csv(args.path)
 
   
