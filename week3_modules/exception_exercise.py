@@ -8,13 +8,7 @@ class Person():
 
   def __init__(self, name):
     self.name = name
-    
-  def containsNumber(value):
-    for character in value:
-        if character.isdigit():
-            return True
-    return False
-    
+        
   def check_name(self):
     if self.name[0].isupper() == False:
       raise InvalidArgumentException('Name has to start with capital letters')
@@ -24,6 +18,7 @@ class Person():
 p1 = Person('Lars')
 p2 = Person('Jens')
 
+p1.check_name()
 p2.check_name()
 
 
