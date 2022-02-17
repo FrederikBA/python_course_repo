@@ -43,6 +43,13 @@ course_list.append(Course("Game Development", "105", "Jesper", 130, 12))
 course_list.append(Course("OOA/OOD", "105", "Kim", 130, 10))
 
 d1 = DataSheet(course_list)
+d2 = DataSheet(
+    [
+        Course("Python", "105", "Thomas", 130, 4),
+        Course("Game Development", "105", "Jesper", 130, 12),
+        Course("OOA/OOD", "105", "Kim", 130, 10),
+    ]
+)
 
 s1 = Student("Janus", "Male", d1, "www.image.com")
 s2 = Student("Rasmus", "Male", d1, "www.image.com")
@@ -50,3 +57,5 @@ s3 = Student("Frederik", "Male", d1, "www.image.com")
 
 print(d1.get_grades_as_list())
 print(s2.get_avg_grade())
+
+print(d2.courses[0].name)
