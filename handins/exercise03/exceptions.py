@@ -2,18 +2,20 @@ from student import Student
 from student import Course
 from student import DataSheet
 
-class NotEnoughStudentsException(ValueError):
 
+class NotEnoughStudentsException(ValueError):
     def __init__(self, msg):
         self.msg = msg
+
 
 def almost_done_students(student_list):
     student_dict = {student: student.show_progession() for student in student_list}
     if len(student_list) >= 3:
         students = sorted(student_dict, key=student_dict.get, reverse=True)[:3]
         return students
-    else :
-        raise NotEnoughStudentsException('Not enough students in list')
+    else:
+        raise NotEnoughStudentsException("Not enough students in list")
+
 
 course_list_01 = []
 course_list_02 = []
