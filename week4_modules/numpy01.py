@@ -9,9 +9,9 @@ blue = a[0:4:2,4]
 green = a[0:3,2]
 
 print(a)
-print(yellow)
-print(teal)
-print(red)
-print(blue)
-print(green)
+print('yellow', '\n', yellow)
+print('teal', '\n', teal)
+print('red', '\n', red)
+print('blue', '\n', blue)
+print('green', '\n', green)
 
