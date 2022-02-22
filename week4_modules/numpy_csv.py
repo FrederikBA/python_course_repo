@@ -50,15 +50,13 @@ def find_area_with_fewest_foreigners(year):
 
 def find_french_age_by_year(year):
     mask = (dd[:, 0] == year) & (dd[:, 3] == 5130)
-    stat_dict = Counter(dd[mask][:, 2])
-    max_value = max(stat_dict, key=stat_dict.get)
+    stat_dict = dict(Counter(dd[mask][:, 2]))
+    max_value = max(stat_dict.items(), key=lambda x: x[1])
     biggest_age_group = []
     for key, value in stat_dict.items():
-      if value == max_value:
+      if value == max_value[1]:
         biggest_age_group.append(key)
-    return biggest_age_group
-    #return stat_dict
-
+    return 'Age groups with highest amount: ', biggest_age_group
 
 # print("Amount of german children in 2015 aged 0:", int(sum(dd[german_children_aged_zero][:,4])))
 # print(show_population(2015,1,18,5100))
