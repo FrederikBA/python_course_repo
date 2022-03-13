@@ -90,3 +90,5 @@ def marriage_status_2020():
     married_data_summed = married_data.groupby("ALDER")["INDHOLD"].sum()
 
     return unmarried_data_summed, married_data_summed
+
+print(never_married())
