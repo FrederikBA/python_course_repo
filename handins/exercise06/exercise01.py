@@ -46,7 +46,10 @@ class TextComparer:
                         total_chars += 1
                         if char in "aeiouAEIOU":
                             total_vowels += 1
-        return total_vowels / total_words
+            value = total_vowels / total_words
+            file = filename.split("/")[-1]
+            vowel_dict = {"Book": file, "Value": value}
+        return vowel_dict
 
     def hardest_read(self, workers=multiprocessing.cpu_count()):
         with ProcessPoolExecutor(workers) as ex:
@@ -69,4 +72,4 @@ textComp = TextComparer(
     ]
 )
 
-textComp.multi_download()
+print(textComp.hardest_read())
