@@ -99,8 +99,8 @@ def average_revenue_by_genre():
     genre_distribution = df_genre.sum().to_dict()
 
     # Find total revenue of each movie genre
-    df_genre_mul = df_genre.mul(df["World Sales (in $)"], axis=0)
-    total_revenue_per_genre = df_genre_mul.sum().to_dict()
+    df_genre_world_sales = df_genre.mul(df["World Sales (in $)"], axis=0)
+    total_revenue_per_genre = df_genre_world_sales.sum().to_dict()
 
     # Calculate average revenue by movie genre
     average_revenue_dict = {}
