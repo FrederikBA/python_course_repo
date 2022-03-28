@@ -88,9 +88,8 @@ def percentage_of_pg_rated_movies():
 
 
 # 4. Calculate the average of world sales for each genre and visualize the data with a bar chart.
-
-
 def average_revenue_by_genre():
+    
     # Modify genre string to allow easier split and split each genre into dummy variable
     df_genre = df["Genre"].str.replace("(\[|\]|\ |')", "")
     df_genre = df_genre.str.get_dummies(sep=",")
@@ -111,3 +110,7 @@ def average_revenue_by_genre():
         average_revenue_dict[k] = average_revenue
 
     return average_revenue_dict
+
+
+if __name__ == '__main__':
+    print(highest_grossing_disney_movies())
