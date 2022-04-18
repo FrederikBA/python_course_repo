@@ -1,0 +1,12 @@
+1650311717115	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileC9RQOf"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+[GFX1-]: No GPUs detected via PCI
+1650311718226	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileC9RQOf/search.json.mozlz4", (void 0)))
+1650311720561	Marionette	INFO	Listening on port 36947
+1650311720662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead

@@ -113,4 +113,8 @@ def average_revenue_by_genre():
 
 
 if __name__ == '__main__':
+    #print(df)
     print(highest_grossing_disney_movies())
+    #print(license_distribution())
+    #print(percentage_of_pg_rated_movies())
+    #print(average_revenue_by_genre())
